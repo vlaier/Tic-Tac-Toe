@@ -77,10 +77,7 @@ function checkWin(currentClass){
     })
 }
 function draw(){
-    var count = 0;
-    cellElements.forEach(cell =>{
-        if(cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS))
-            count +=1
+    return [...cellElements].every(cell => {
+        return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
     })
-    return count === 9
 }
